@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #081b29;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    text-shadow: 0px 0px 10px #5cfaff,
+                0px 0px 20px #5cfaff,
+                0px 0px 40px #5cfaff,
+                0px 0px 80px #5cfaff;
+    font-size: 25px;
+    color: #5cfaff;
+    font-weight: 600;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: aqua;
+}
+
+.Home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.Home-content{
+    max-width: 700px;
+}
+
+.Home-content h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: #ededed;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #00fffd,#ff00c3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+.Home-content p{
+    font-size: 16px;
+    color: #ededed;
+    margin: 20px 0 40px;
+}
+.Home-content .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 330px;
+    height: 40px;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.btn-box a:hover{
+    color: #00abf0;
+}
+
+.btn-box :nth-child(2){
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box :nth-child(2):hover{
+    color: black;
+}
+
+
+.btn-box :nth-child(2)::before{
+    background: #00abf0;
+}
+
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:black;
+    z-index: -1;
+    transition: .5s;
+    
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+
+}
+
+.Home-sci{
+    position: absolute;
+    bottom: 70px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.Home-sci a:hover::before{
+    background: black;
+}
+
+.Home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:#00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.Home-sci a:hover::before{
+    width: 100%;
+}
+
+.block{
+    position: absolute;
+    width: 400px;
+    height: 450px;
+    margin-top: 200px;
+    margin-left: 750px;
+    background: url("self-img.png");
+    background-size: cover;
+    border-radius: 25px 50px;
+    background-repeat: no-repeat;
+    
+}
+
+.glow::before, .glow::after{
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(-45deg, #00ff66, #00ffff, #ff00ff, #ff0099,#099fff
+    );
+    border-radius: 25px 50px;
+    background-size: 400%;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    z-index: -1;
+    animation: change 40s linear infinite;
+}
+
+@keyframes change{
+    0%{
+        background-position: 0,0;
+    }
+    50%{
+        background-position: 400%,0;
+    }
+    100%{
+        background-position: 0,0;
+    }
+
+}
+.glow::after{
+    filter: blur(40px);
+    opacity: .5;
+}
+
+
